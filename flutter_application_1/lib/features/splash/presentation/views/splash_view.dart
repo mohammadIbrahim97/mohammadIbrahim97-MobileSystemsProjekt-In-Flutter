@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/utils/app_strings.dart';
 import 'package:flutter_application_1/core/utils/app_text_styles.dart';
-import 'package:go_router/go_router.dart';
 import '../../../../core/functions/navigation.dart';
 
 class SplashView  extends StatefulWidget{
