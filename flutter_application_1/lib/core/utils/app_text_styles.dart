@@ -8,4 +8,16 @@ abstract class CustomTextStyles {
     color: AppColors.deebBrown,
     fontFamily: "Pacifico",
   );
+    static final poppins500style24 = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w500,
+    color: AppColors.black,
+    fontFamily: "Poppins",
+  );
+      static final poppins300style16 = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w300,
+    color: AppColors.black,
+    fontFamily: "Poppins",
+  );
 }
