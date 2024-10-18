@@ -29,4 +29,11 @@ void initState() {
     );
   }
 }
- 
+ void delayedNavigate(context) {
+    Future.delayed(
+      const Duration(seconds: 2),
+      () {
+        customReplacementNavigate(context, "/onBoarding");
+      },
+    );
+  }

@@ -18,6 +18,7 @@ class OnBoardingView extends StatelessWidget{
               const SizedBox(height: 40),
               const CustomNavBar(),
               ObBoardingWidgetBody(),
+              const SizedBox(height: 88),
               const CustomBtn(text: AppStrings.next,),
               const SizedBox(height: 14),
             ],

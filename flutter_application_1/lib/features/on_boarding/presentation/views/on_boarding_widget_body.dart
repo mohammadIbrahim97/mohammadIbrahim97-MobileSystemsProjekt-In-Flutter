@@ -10,13 +10,25 @@ class ObBoardingWidgetBody extends StatelessWidget{
   Widget build(BuildContext context) {
     return Expanded(
       child: PageView.builder(
+        physics: const BouncingScrollPhysics(),
         controller: _controller,
         itemCount: 3,
         // ignore: non_constant_identifier_names
         itemBuilder: (context, Index){
           return Column(
             children: [
-              Image.asset(Assets.imagesOnBoarding1),
+                Container(
+                  height: 290,
+                  width: 343,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        Assets.imagesOnBoarding1,
+                    ),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              ),
               const SizedBox(height: 24),
               CustomSmoothPageIndicator(controller: _controller),
               const SizedBox(height: 32),
@@ -24,12 +36,15 @@ class ObBoardingWidgetBody extends StatelessWidget{
                 "Explore The history with Chronik in a smart way",
                 style: CustomTextStyles.poppins500style24.copyWith(fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
                 ),
                 const SizedBox(height: 16),
               Text(
                 "Using our app's history libraries, you can find many historical periods and events",
                 style: CustomTextStyles.poppins300style16,
                 textAlign: TextAlign.center,
+                maxLines: 2,
                 ),
             ],
           );
