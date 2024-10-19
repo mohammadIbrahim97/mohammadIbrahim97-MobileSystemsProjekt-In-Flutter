@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/core/utils/app_assets.dart';
 import 'package:flutter_application_1/core/utils/app_text_styles.dart';
+import 'package:flutter_application_1/features/on_boarding/data/models/on_boarding_model.dart';
 import 'package:flutter_application_1/features/on_boarding/presentation/views/widgets/custom_smooth_page_indicator.dart';
 
 class ObBoardingWidgetBody extends StatelessWidget{
@@ -12,7 +12,7 @@ class ObBoardingWidgetBody extends StatelessWidget{
       child: PageView.builder(
         physics: const BouncingScrollPhysics(),
         controller: _controller,
-        itemCount: 3,
+        itemCount: onBoardingData.length,
         // ignore: non_constant_identifier_names
         itemBuilder: (context, Index){
           return Column(
@@ -20,10 +20,10 @@ class ObBoardingWidgetBody extends StatelessWidget{
                 Container(
                   height: 290,
                   width: 343,
-                  decoration: const BoxDecoration(
+                  decoration:  BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
-                        Assets.imagesOnBoarding1,
+                        onBoardingData[Index].imagePath,
                     ),
                     fit: BoxFit.fill,
                   ),
@@ -33,7 +33,7 @@ class ObBoardingWidgetBody extends StatelessWidget{
               CustomSmoothPageIndicator(controller: _controller),
               const SizedBox(height: 32),
               Text(
-                "Explore The history with Chronik in a smart way",
+                onBoardingData[Index].title,
                 style: CustomTextStyles.poppins500style24.copyWith(fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
                 maxLines: 2,
@@ -41,7 +41,7 @@ class ObBoardingWidgetBody extends StatelessWidget{
                 ),
                 const SizedBox(height: 16),
               Text(
-                "Using our app's history libraries, you can find many historical periods and events",
+                onBoardingData[Index].subtitle,
                 style: CustomTextStyles.poppins300style16,
                 textAlign: TextAlign.center,
                 maxLines: 2,
