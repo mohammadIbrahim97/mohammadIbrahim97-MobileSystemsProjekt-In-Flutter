@@ -14,16 +14,16 @@ class ObBoardingWidgetBody extends StatelessWidget{
         controller: _controller,
         itemCount: onBoardingData.length,
         // ignore: non_constant_identifier_names
-        itemBuilder: (context, Index){
+        itemBuilder: (context, index){
           return Column(
             children: [
                 Container(
                   height: 290,
                   width: 343,
-                  decoration:  BoxDecoration(
+                  decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
-                        onBoardingData[Index].imagePath,
+                        onBoardingData[index].imagePath,
                     ),
                     fit: BoxFit.fill,
                   ),
@@ -33,7 +33,7 @@ class ObBoardingWidgetBody extends StatelessWidget{
               CustomSmoothPageIndicator(controller: _controller),
               const SizedBox(height: 32),
               Text(
-                onBoardingData[Index].title,
+                onBoardingData[index].title,
                 style: CustomTextStyles.poppins500style24.copyWith(fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
                 maxLines: 2,
@@ -41,7 +41,7 @@ class ObBoardingWidgetBody extends StatelessWidget{
                 ),
                 const SizedBox(height: 16),
               Text(
-                onBoardingData[Index].subtitle,
+                onBoardingData[index].subtitle,
                 style: CustomTextStyles.poppins300style16,
                 textAlign: TextAlign.center,
                 maxLines: 2,

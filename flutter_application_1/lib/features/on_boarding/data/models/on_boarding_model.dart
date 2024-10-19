@@ -12,6 +12,9 @@ class OnBoardingModel{
     });
   }
 
+
+  
+
   List<OnBoardingModel> onBoardingData = [
     OnBoardingModel(
       imagePath: Assets.imagesOnBoarding1,
