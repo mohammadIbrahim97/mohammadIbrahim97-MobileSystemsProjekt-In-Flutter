@@ -14,13 +14,14 @@ class OnBoardingView extends StatelessWidget{
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
+            // physics: const BouncingScrollPhysics(),
             children: [
               const SizedBox(height: 40),
               const CustomNavBar(),
               ObBoardingWidgetBody(),
               const SizedBox(height: 88),
               const CustomBtn(text: AppStrings.next,),
-              const SizedBox(height: 14),
+              const SizedBox(height: 17),
             ],
           ),
         ),
