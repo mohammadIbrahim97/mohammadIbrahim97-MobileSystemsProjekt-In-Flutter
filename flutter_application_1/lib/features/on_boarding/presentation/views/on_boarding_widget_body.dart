@@ -8,8 +8,8 @@ class OnBoardingWidgetBody extends StatelessWidget{
   final PageController _controller = PageController();
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      // height: 500,
+    return SizedBox(
+      height: 500,
       child: PageView.builder(
         physics: const BouncingScrollPhysics(),
         controller: _controller,
