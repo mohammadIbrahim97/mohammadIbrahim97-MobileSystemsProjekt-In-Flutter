@@ -4,6 +4,7 @@ import 'package:flutter_application_1/core/utils/app_strings.dart';
 import 'package:flutter_application_1/core/utils/app_text_styles.dart';
 import 'package:flutter_application_1/core/widgets/custom_button.dart';
 import 'package:flutter_application_1/features/on_boarding/data/models/on_boarding_model.dart';
+import 'package:flutter_application_1/features/on_boarding/presentation/views/functions/on_boarding.dart';
 
 class GetButtons extends StatelessWidget {
   const GetButtons(
@@ -21,12 +22,14 @@ class GetButtons extends StatelessWidget {
                     CustomBtn(
                       text: AppStrings.createAccount,
                       onPressed: () {
+                        onBoardingVisited();
                         customNavigate(context, "/signUp");
                       },
                     ),
                     const SizedBox(height: 16),
                     GestureDetector(
                       onTap: () {
+                        onBoardingVisited();
                         customNavigate(context, "/signIn");
                       },
                       child: Text( 

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/database/cache/cache_helper.dart';
+import 'package:flutter_application_1/core/services/service_locator.dart';
 import 'package:flutter_application_1/core/utils/app_strings.dart';
 import 'package:flutter_application_1/core/utils/app_text_styles.dart';
-import '../../../../core/functions/navigation.dart';
-
+import 'package:flutter_application_1/core/functions/navigation.dart';
 class SplashView  extends StatefulWidget{
   const SplashView({super.key});
 
@@ -14,7 +15,12 @@ class SplashView  extends StatefulWidget{
 class _SplashViewState extends State<SplashView>{
  @override
 void initState() {
-  delayedNavigate(context);
+  bool isOnBoardingVisisted= getIt<CacheHelper>().getData(key: "isOnBoardingVisited")??false;
+   if(isOnBoardingVisisted==true){
+    delayedNavigate(context,"/signUp");
+   }else{
+    delayedNavigate(context,"/onBoarding");
+   }
   super.initState();
 }
   @override
@@ -29,11 +35,11 @@ void initState() {
     );
   }
 }
- void delayedNavigate(context) {
-    Future.delayed(
-      const Duration(seconds: 2),
-      () {
-        customReplacementNavigate(context, "/onBoarding");
-      },
-    );
+ void delayedNavigate(context,path) {
+  Future.delayed(
+    const Duration(seconds: 2),
+    () {
+      customReplacementNavigate(context, path);
+    },
+  );
   }

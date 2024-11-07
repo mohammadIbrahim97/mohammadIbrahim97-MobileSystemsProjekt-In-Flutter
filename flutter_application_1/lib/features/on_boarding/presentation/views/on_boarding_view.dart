@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/functions/navigation.dart';
-import 'package:flutter_application_1/features/on_boarding/presentation/views/widgets/get_Buttons.dart';
+import 'package:flutter_application_1/features/on_boarding/presentation/views/functions/on_boarding.dart';
+import 'package:flutter_application_1/features/on_boarding/presentation/views/widgets/get_buttons.dart';
 import 'package:flutter_application_1/features/on_boarding/presentation/views/widgets/on_boarding_widget_body.dart';
 import 'package:flutter_application_1/features/on_boarding/presentation/views/widgets/custom_nav_bar.dart';
 
@@ -26,7 +27,8 @@ class _OnBoardingViewState extends State<OnBoardingView> {
             children: [
               const SizedBox(height: 40),
                CustomNavBar(
-                onTap: () { 
+                onTap: () {
+                  onBoardingVisited();
                   customNavigate(context, "/signUp");
                 },
               ),
