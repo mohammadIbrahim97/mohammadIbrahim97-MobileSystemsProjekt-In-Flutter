@@ -16,7 +16,10 @@ abstract class AppStrings {
       lastName = "Last Name",
       emailAddress = "Email Address",
       password = "Password",
-      iHaveAgreeToOurTermsAndCondition = "I have agree to our Terms and Condition",
+      iHaveAgreeToOur = 
+            "I have agree to our ",
+      termsAndCondition = 
+            "Terms and Condition",
       signUp = "Sign Up",
       signIn = "Sign In",
       alreadyHaveAnAccount = "Already have an account ?",
@@ -73,4 +76,7 @@ abstract class AppStrings {
       verifyAccount = "Verify Account",
       enter4DigitCodeWeHaveSentTo = "Enter 4 digit code we have sent to ",
       haventReceivedVerificationCode = "Haven’t received verification code?";
+
+ 
+
 }
