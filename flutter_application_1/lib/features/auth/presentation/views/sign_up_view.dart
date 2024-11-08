@@ -71,11 +71,11 @@ class HaveAnAccountWidget extends StatelessWidget {
           [
             TextSpan(
               text: text1,
-              style: CustomTextStyles.pacifico400style12,
+              style: CustomTextStyles.poppins400style12,
             ),
             TextSpan(
               text: text2,
-              style: CustomTextStyles.pacifico400style12.copyWith(
+              style: CustomTextStyles.poppins400style12.copyWith(
                 color: AppColors.lightGrey,
                 decoration: TextDecoration.underline,
               ),

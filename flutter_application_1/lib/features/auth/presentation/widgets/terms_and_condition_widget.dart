@@ -13,11 +13,11 @@ class TermsAndConditions extends StatelessWidget {
        const CustomCheckBox(),
        Text.rich(TextSpan(children: [
           TextSpan(text: AppStrings.iHaveAgreeToOur,
-          style: CustomTextStyles.pacifico400style12
+          style: CustomTextStyles.poppins400style12
           ),
           TextSpan(
             text: AppStrings.termsAndCondition,
-            style: CustomTextStyles.pacifico400style12.copyWith(
+            style: CustomTextStyles.poppins400style12.copyWith(
               decoration: TextDecoration.underline,
             )
 

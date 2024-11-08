@@ -8,7 +8,7 @@ abstract class CustomTextStyles {
     color: AppColors.deebBrown,
     fontFamily: "Pacifico",
   );
-    static final pacifico400style12 = TextStyle(
+    static final poppins400style12 = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.w400,
     color: AppColors.deepGrey,
