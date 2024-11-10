@@ -39,6 +39,7 @@ dependencies:
   smooth_page_indicator: ^1.2.0+3
   shared_preferences: ^2.0.13
   get_it: ^7.2.0
+  flutter_bloc: ^8.1.6
 
 dev_dependencies:
   flutter_test:
