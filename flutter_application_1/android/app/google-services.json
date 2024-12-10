@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "865912326780",
+    "project_id": "chronikflutter",
+    "storage_bucket": "chronikflutter.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865912326780:android:c37ad074143246bc3fd7f9",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG0eS89UiCEHIbU0PU2StqJGa15Xh-vbE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

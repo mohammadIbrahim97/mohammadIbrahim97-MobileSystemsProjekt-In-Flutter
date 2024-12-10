@@ -1,27 +1,18 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_application_1/app/chronik_app.dart';
 import 'package:flutter_application_1/core/database/cache/cache_helper.dart';
-import 'package:flutter_application_1/core/routes/app_router.dart';
+import 'package:flutter_application_1/core/functions/check_state_changes.dart';
 import 'package:flutter_application_1/core/services/service_locator.dart';
-import 'package:flutter_application_1/core/utils/app_colors.dart';
+import 'package:flutter_application_1/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
 
 void main()async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   setupServiceLocator();
   await getIt<CacheHelper>().init();
+  checkStateChanges();
   runApp(const Chronik());
-}
-
-class Chronik extends StatelessWidget {
-  const Chronik ({super.key});
-
-  @override
-  Widget build(BuildContext context){
-    return MaterialApp.router(
-      theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.offWhite
-      ),
-      debugShowCheckedModeBanner: false,
-      routerConfig: router,
-    );
-  } 
 }

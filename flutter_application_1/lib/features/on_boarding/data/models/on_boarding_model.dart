@@ -15,7 +15,7 @@ class OnBoardingModel{
   List<OnBoardingModel> onBoardingData = [
     OnBoardingModel(
       imagePath: Assets.imagesOnBoarding1,
-      title: "Explore The history with Chronik in a smart way<Explore The history with Chronik in a smart wayExplore The history with Chronik in a smart way",
+      title: "Explore The history with Chronik in a smart way",
       subtitle: "Using our app's history libraries, you can find many historical periods and events",
     ),
     OnBoardingModel(
