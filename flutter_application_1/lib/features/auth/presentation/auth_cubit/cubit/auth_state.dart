@@ -7,3 +7,4 @@ final class SignupFailureState extends AuthState {
   final String errMessage;
   SignupFailureState({required this.errMessage});
 }
+final class TermsAndConditionState extends AuthState {}
