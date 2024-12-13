@@ -22,8 +22,6 @@ class SignUpView extends StatelessWidget {
             child: WelcomeTextWidget(text: AppStrings.welcome)),
            SliverToBoxAdapter(
             child: SizedBox(height: 16)),
-           SliverToBoxAdapter(
-            child: CustomTextFormFields(labelText: AppStrings.fristName,)),
            SliverToBoxAdapter(child: CustomSignUpForm()),
              SliverToBoxAdapter(
               child: TermsAndConditions(),),
