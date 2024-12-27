@@ -12,7 +12,7 @@ abstract class CustomTextStyles {
     fontSize: 12,
     fontWeight: FontWeight.w400,
     color: AppColors.deepGrey,
-    fontFamily: "poopins",
+    fontFamily: "Poopins",
   );
     static final poppins500style24 = TextStyle(
     fontSize: 24,
@@ -49,5 +49,23 @@ abstract class CustomTextStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.deebBrown,
     fontFamily: "Poppins",
+  );
+      static final poppins400style24 = TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.w800,
+        color: AppColors.deebBrown,
+        fontFamily: "Poppins",
+      );
+  static final poppins400style18 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w400,
+    color: AppColors.deepGrey,
+    fontFamily: "Poopins",
+  );
+  static final poppins400styleGrey20 = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w400,
+    color: AppColors.deepGrey,
+    fontFamily: "Poopins",
   );
 }
