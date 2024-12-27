@@ -19,8 +19,8 @@ void initState() {
   bool isOnBoardingVisisted= getIt<CacheHelper>().getData(key: "isOnBoardingVisited")??false;
    if(isOnBoardingVisisted==true){
     FirebaseAuth.instance.currentUser == null
-    ? delayedNavigate(context,"/signUp")
-    :delayedNavigate(context, "/home");
+    ? delayedNavigate(context,"/signIn")
+    :delayedNavigate(context, "/homeNavBar");
    }else{
     delayedNavigate(context,"/onBoarding");
    }
