@@ -89,5 +89,18 @@ class Assets {
   /// Assets for imagesVector2
   /// assets/images/vector2.svg
   static const String imagesVector2 = "assets/images/vector2.svg";
+
+  ///Assests for persons
+  static const String imagesPerson2 = "assets/images/Person2.png";
+  static const String imagesPerson3 = "assets/images/Person3.png";
+  static const String imagesPerson4 = "assets/images/Person4.png";
+
+
+  ///Assests for Items
+  static const String imagesItem1 = "assets/images/Item1.png";
+  static const String imagesItem2 = "assets/images/Item2.png";
+  static const String imagesItem3 = "assets/images/Item3.png";
+  static const String imagesItem4 = "assets/images/Item4.png";
+
 }
 

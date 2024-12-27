@@ -38,7 +38,7 @@ abstract class CustomTextStyles {
     color: AppColors.deepGrey,
     fontFamily: "Poppins",
   );
-      static const saira700style32 = const TextStyle(
+      static const saira700style32 =  TextStyle(
     fontSize: 32,
     fontWeight: FontWeight.w700,
     color: Colors.white,

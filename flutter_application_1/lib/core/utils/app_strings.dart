@@ -51,6 +51,7 @@ abstract class AppStrings {
       historyBooks = "History Books",
       historicalPeriods = "Historical Periods",
       historicalSouvenirs = "Historical Souvenirs",
+      historicalCharacters = "Historical Characters",
       //!Cart
 
       myCart = "My Cart",
@@ -76,8 +77,18 @@ abstract class AppStrings {
       resendCode = "Resend Code",
       verifyAccount = "Verify Account",
       enter4DigitCodeWeHaveSentTo = "Enter 4 digit code we have sent to ",
-      haventReceivedVerificationCode = "Haven’t received verification code?";
+      haventReceivedVerificationCode = "Haven’t received verification code?",
 
- 
 
+      //histirical persons names
+      person1 = "Lionheart",
+      person2 = "Napoleon",
+      person3 = "Saladin",
+      person4 = "Qianlong",
+
+      //Historical Souvenirs names
+      souvenir1 = "Old Books",
+      souvenir2 = "Puzzels",
+      souvenir3 = "Old Stuff",
+      souvenir4 = "Old Cothes";
 }
