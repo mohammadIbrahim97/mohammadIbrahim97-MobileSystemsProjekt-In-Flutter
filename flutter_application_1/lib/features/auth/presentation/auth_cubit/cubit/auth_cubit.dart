@@ -83,4 +83,13 @@ class AuthCubit extends Cubit<AuthState> {
       emit(SigninFailureState(errMessage: e.toString()));
     }
   }
+
+//get user profile from firestore
+  Future<Map<String, dynamic>?> getUserProfile(String userId) async {
+    DocumentSnapshot userDoc = await FirebaseFirestore.instance.collection('users').doc(userId).get();
+    if (userDoc.exists) {
+      return userDoc.data() as Map<String, dynamic>?;
+    }
+    return null;
+  }
 }

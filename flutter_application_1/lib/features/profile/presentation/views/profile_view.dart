@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/utils/app_text_styles.dart';
+import 'package:flutter_application_1/core/utils/app_colors.dart';
+import '../../../../core/functions/navigation.dart';
+
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -54,7 +57,10 @@ class ProfileView extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             ListTile(
-              leading: const Icon(Icons.person_2_rounded),
+              leading: Icon(
+                  Icons.person_2_rounded,
+                  color: AppColors.deebBrown,
+              ),
               title:  Text(
                 'Edit Profile',
                 style: CustomTextStyles.poppins400style20,
@@ -73,14 +79,17 @@ class ProfileView extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             ListTile(
-              leading: const Icon(Icons.logout),
+              leading: Icon(
+                  Icons.logout_rounded,
+                  color: AppColors.deebBrown,
+              ),
               title:  Text(
                 'Log Out',
                 style: CustomTextStyles.poppins400style20,
               ),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
-                // Handle log out tap
+                customReplacementNavigate(context, "/signIn");
               },
             ),
           ],
