@@ -6,6 +6,7 @@ import 'package:flutter_application_1/core/utils/app_text_styles.dart';
 import 'package:flutter_application_1/core/widgets/custom_header_text.dart';
 import 'package:flutter_application_1/features/home/presentation/widgets/home_app_bar_widget.dart';
 
+
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
