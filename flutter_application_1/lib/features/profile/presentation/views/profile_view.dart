@@ -69,9 +69,10 @@ class ProfileView extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      const CircleAvatar(
+                      CircleAvatar(
                         radius: 40,
-                        backgroundImage: AssetImage('assets/images/profile.jpg'), // Replace with actual profile image path
+                        backgroundColor: AppColors.primaryColor,
+                        child: Icon(Icons.person_2_rounded, size: 40, color: AppColors.deebBrown),
                       ),
                       const SizedBox(width: 16),
                       Column(

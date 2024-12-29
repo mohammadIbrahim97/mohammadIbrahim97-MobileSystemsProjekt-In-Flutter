@@ -59,7 +59,13 @@ class _EditProfileViewState extends State<EditProfileView> {
           child: Text('Edit Profile', style: CustomTextStyles.poppins400style24),
         ),
         centerTitle: true,
-        automaticallyImplyLeading: false, // Remove the back arrow icon button
+        automaticallyImplyLeading: false, // Remove the automatic back arrow icon button
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios_new, color: AppColors.deebBrown), // Deep brown color
+          onPressed: () {
+            customNavigate(context, "/profile");
+          },
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
