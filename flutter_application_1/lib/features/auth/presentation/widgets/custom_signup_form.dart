@@ -21,10 +21,10 @@ class CustomSignUpForm extends StatelessWidget {
       listener: (context, state) {
         if (state is SignupSuccessState) {
           showToast("Account created successfully");
-          customReplacementNavigate(context, "/home");
+          customReplacementNavigate(context, "/homeNavBar");
         }
         else if (state is SignupFailureState) {
-        showToast(state.errMessage);
+          showToast(state.errMessage);
         }
       },
       builder: (context, state) {
@@ -65,18 +65,18 @@ class CustomSignUpForm extends StatelessWidget {
               const SizedBox(height: 88),
               state is SignupLoadingState
                   ? CircularProgressIndicator(color: AppColors.primaryColor,)
-                :CustomBtn(
-                color: authCubit.termsAndConditionsCheckBoxValue == true
-                    ? AppColors.primaryColor
-                    : AppColors.deepGrey,
-                onPressed: () {
-                if (authCubit.termsAndConditionsCheckBoxValue == true) {
-                    if (authCubit.signupFormKey.currentState!.validate()) {
-                      authCubit.signUpWithEmailAndPassword();
+                  :CustomBtn(
+                  color: authCubit.termsAndConditionsCheckBoxValue == true
+                      ? AppColors.primaryColor
+                      : AppColors.deepGrey,
+                  onPressed: () {
+                    if (authCubit.termsAndConditionsCheckBoxValue == true) {
+                      if (authCubit.signupFormKey.currentState!.validate()) {
+                        authCubit.signUpWithEmailAndPassword();
+                      }
                     }
-                  }
-              }, 
-              text: AppStrings.signUp),
+                  },
+                  text: AppStrings.signUp),
             ],
           ),
         );

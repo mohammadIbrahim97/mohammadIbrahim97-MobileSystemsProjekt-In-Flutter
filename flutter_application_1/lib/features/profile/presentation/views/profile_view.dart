@@ -45,6 +45,7 @@ class ProfileView extends StatelessWidget {
             ),
           ),
           centerTitle: true,
+          automaticallyImplyLeading: false, // Remove the back arrow icon button
         ),
       ),
       body: FutureBuilder<Map<String, dynamic>?>(
@@ -105,7 +106,7 @@ class ProfileView extends StatelessWidget {
                     ),
                     trailing: const Icon(Icons.arrow_forward_ios),
                     onTap: () {
-                      // Handle edit profile tap
+                      customNavigate(context, "/editProfile");
                     },
                   ),
                   const SizedBox(height: 24),
