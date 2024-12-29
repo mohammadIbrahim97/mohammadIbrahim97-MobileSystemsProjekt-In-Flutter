@@ -9,6 +9,9 @@ import 'package:flutter_application_1/features/auth/presentation/views/sign_up_v
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/profile/presentation/views/edit_profile.dart';
+import '../../features/profile/presentation/views/profile_view.dart';
+
 
 
 
@@ -45,6 +48,14 @@ final GoRouter router = GoRouter(routes:[
       path: "/home",  
       builder: (context, state) => const HomeView(),
       ),
+    GoRoute(
+      path: "/editProfile",
+      builder: (context, state) => const EditProfileView(),
+    ),
+    GoRoute(
+      path: "/profile",
+      builder: (context, state) => const ProfileView(),
+    )
   ],
 
 );
