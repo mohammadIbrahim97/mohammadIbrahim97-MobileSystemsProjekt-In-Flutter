@@ -1,5 +1,3 @@
-
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -50,17 +48,20 @@ class AuthCubit extends Cubit<AuthState> {
 
 
   addUserProfile() async {
-    CollectionReference users = FirebaseFirestore.instance.collection("users");
-    await users.add({
-      'firstName': firstName,
-      'lastName': lastName,
-      'email': emailAddress,
-    });
+    User? user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      CollectionReference users = FirebaseFirestore.instance.collection(
+          "users");
+      await users.doc(user.uid).set({
+        'firstName': firstName,
+        'lastName': lastName,
+        'email': emailAddress,
+      });
+    }
   }
 
 
-
-  signInWithEmailAndPassword() async {
+      signInWithEmailAndPassword() async {
   try {
     emit(SigninLoadingState());
     if (password != null) {
@@ -82,5 +83,14 @@ class AuthCubit extends Cubit<AuthState> {
     catch (e) {
       emit(SigninFailureState(errMessage: e.toString()));
     }
+  }
+
+//get user profile from firestore
+  Future<Map<String, dynamic>?> getUserProfile(String userId) async {
+    DocumentSnapshot userDoc = await FirebaseFirestore.instance.collection('users').doc(userId).get();
+    if (userDoc.exists) {
+      return userDoc.data() as Map<String, dynamic>?;
+    }
+    return null;
   }
 }
