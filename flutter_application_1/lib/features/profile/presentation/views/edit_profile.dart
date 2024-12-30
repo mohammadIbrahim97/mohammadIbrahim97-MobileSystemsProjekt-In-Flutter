@@ -45,7 +45,7 @@ class _EditProfileViewState extends State<EditProfileView> {
           'firstName': _firstNameController.text,
           'lastName': _lastNameController.text,
         });
-        customNavigate(context, "/profile");
+        customReplacementNavigate(context, "/homeNavBar");
       }
     }
   }
@@ -63,7 +63,7 @@ class _EditProfileViewState extends State<EditProfileView> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios_new, color: AppColors.deebBrown), // Deep brown color
           onPressed: () {
-            customNavigate(context, "/profile");
+            customReplacementNavigate(context, "/homeNavBar");
           },
         ),
       ),
