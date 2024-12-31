@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/utils/app_colors.dart';
 import 'package:flutter_application_1/core/utils/app_text_styles.dart';
-import 'package:shake/shake.dart';
-import 'dart:math';
-import 'package:cloud_firestore/cloud_firestore.dart';
+//import 'package:shake/shake.dart';
+//import 'dart:math';
+//import 'package:cloud_firestore/cloud_firestore.dart';
 
 class SearchView extends StatefulWidget {
   const SearchView({super.key});
@@ -13,7 +13,7 @@ class SearchView extends StatefulWidget {
 }
 
 class _SearchViewState extends State<SearchView> {
-  List<String> _texts = [];
+  /*List<String> _texts = [];
   String _randomText = 'Shake the phone to read about a random topic';
 
   @override
@@ -55,6 +55,7 @@ class _SearchViewState extends State<SearchView> {
       print('No texts available'); // Debug print
     }
   }
+*/
 
   @override
   Widget build(BuildContext context) {
@@ -88,12 +89,14 @@ class _SearchViewState extends State<SearchView> {
                 ],
               ),
             ),
-            const SizedBox(height: 20),
+            /*const SizedBox(height: 20),
             Text(
               _randomText,
               style: CustomTextStyles.poppins400style20,
               textAlign: TextAlign.center,
-            ),
+            ),*/
+
+            // This button is used to simulate the shake event
             /*const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _showRandomText, // Simulate shake event
