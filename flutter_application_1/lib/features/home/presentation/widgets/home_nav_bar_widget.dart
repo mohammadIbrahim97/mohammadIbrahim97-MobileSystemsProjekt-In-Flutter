@@ -36,7 +36,7 @@ class HomeNavBarWidget extends StatelessWidget {
 List<Widget> _buildScreens() {
     return [
           const HomeView(),
-          const CartView(),
+          //const CartView(),
           const SearchView(),
           const ProfileView(),
           ];
@@ -48,10 +48,10 @@ List<PersistentBottomNavBarItem> _navBarsItems(){
       icon: SvgPicture.asset(Assets.imagesHomeIconActive),
       inactiveIcon: SvgPicture.asset(Assets.imagesHomeIcon),
     ),
-    PersistentBottomNavBarItem(
+    /*PersistentBottomNavBarItem(
       icon: SvgPicture.asset(Assets.imagesShoppingCartActive),
       inactiveIcon: SvgPicture.asset(Assets.imagesShoppingCart),
-    ),
+    ),*/
     PersistentBottomNavBarItem(
       icon: SvgPicture.asset(Assets.imagesSearchActive),
       inactiveIcon: SvgPicture.asset(Assets.imagesSearch),
