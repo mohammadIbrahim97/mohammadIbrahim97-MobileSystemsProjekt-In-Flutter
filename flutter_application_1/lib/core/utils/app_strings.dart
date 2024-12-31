@@ -90,5 +90,5 @@ abstract class AppStrings {
       souvenir1 = "Old Books",
       souvenir2 = "Puzzels",
       souvenir3 = "Old Stuff",
-      souvenir4 = "Old Cothes";
+      souvenir4 = "Old Clothes";
 }
